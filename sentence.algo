@@ -1,0 +1,22 @@
+ALGORITHM sentence
+VAR
+    c:CHAR;
+    nbrc,nbrv,nbrw:INTEGER;
+BEGIN
+    nbrc :=0
+    nbrv :=0
+    nbrw :=0
+    REPEAT
+        Read(c);
+        nbrc:=nbrc+1
+        IF (c='a' OR c='e' OR c='i' OR c='o' OR c='y') THEN
+            nbrv :=nbrv+1
+        END_IF
+        IF (c=' ' OR c:='.') THEN
+            nbrw := nbrw+1
+        END_IF
+    UNTIL (c='.')
+    Write("nombre totale de caractère:",nbrc)
+    Write("nombre totale de mots:",nbrw)
+    Write("nombre totale de voyelles:",nbrv)
+END
